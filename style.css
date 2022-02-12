@@ -80,11 +80,15 @@ main > section {
   font-size: 2em;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 450px) {
   .centred {
     font-size: 6vw;
   }
   .logo {
+    height: 6vh;
+  }
+
+  .specialty-icon {
     height: 6vh;
   }
 
@@ -125,6 +129,24 @@ main > section {
 
   footer {
     font-size: 5vw;
+  }
+
+  .form {
+    width: 100%;
+    border-radius: 10%;
+    /* display: grid; */
+  }
+
+  textarea {
+    width: 80vw;
+  }
+
+  .form-fields {
+    width: 90vw;
+  }
+
+  #button {
+    width: 15vw;
   }
 }
 
@@ -191,8 +213,9 @@ footer {
 }
 .form {
   background-color: #4d85553a;
-  margin: 10px;
+  margin: 10px 0px;
   padding: 10px;
+  width: 30vw;
   border-radius: 10%;
   /* display: grid; */
 }
@@ -204,7 +227,8 @@ footer {
 #button {
   background-color: #1572a1;
   font-family: "Amatic SC", cursive;
-  font-size: 0.8em;
   color: white;
-  margin: 10px 0px 10px 300px;
+  width: 15vw;
+  margin-left: auto;
+  margin-top: 10px;
 }
