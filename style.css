@@ -84,9 +84,12 @@ main > section {
   .centred {
     font-size: 6vw;
   }
+  .logo {
+    height: 6vh;
+  }
 
   h2 {
-    font-size: 5vw;
+    display: none;
   }
 
   .icon {
@@ -95,8 +98,33 @@ main > section {
   }
 
   .hamburger {
-    font-size: 5vw;
+    font-size: 4vw;
   }
+
+  nav h1 {
+    text-align: left;
+    font-size: 7vw;
+  }
+
+  nav {
+    background-color: #1572a1;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    padding: 10px 20px;
+    color: white;
+  }
+
+  img {
+    height: 8vh;
+  }
+}
+.instruction {
+  font-size: 6vw;
+}
+
+footer {
+  font-size: 5vw;
 }
 
 .centred {
