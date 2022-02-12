@@ -1,24 +1,102 @@
 * {
-    box-sizing: border-box;
-  }
-
-body {
-    background-color: #9AD0EC;
-    font-size: 30px;
-    font-family: 'Amatic SC', cursive; 
+  box-sizing: border-box;
 }
 
+body {
+  background-color: #9ad0ec;
+  font-size: 30px;
+  font-family: "Amatic SC", cursive;
+}
 
 a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
+}
+
+/* 
+.icon:hover {
+    opacity: 0.4;
+} */
+
+nav {
+  background-color: #1572a1;
+  display: grid;
+  grid-template-columns: 0.4fr 0.3fr 2fr 0.75fr;
+  align-items: center;
+  text-align: center;
+  padding: 10px 20px;
+  color: white;
+}
+.homepage {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+.logo {
+  height: 80px;
+}
+h2 {
+  text-align: left;
+  font-size: smaller;
+}
+nav h1 {
+  text-align: left;
+  grid-column: 3 / span 1;
+}
+
+nav > section {
+  display: grid;
+  /* justify-content: space-between; */
+  font-size: 0.9em;
+  padding: 5px;
+}
+
+main > section {
+  background-color: #e3bec6;
+  padding: 20px;
+}
+
+.presentations > a {
+  color: #435e6b;
+}
+
+.instruction {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row: 1;
+}
+
+.icon-menu {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+  padding: 20px;
+  row-gap: 20px;
 }
 
 .icon {
-    position: relative;
-    text-align: center;
-    color:white;
-    font-size: 2em;
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+}
+
+@media only screen and (max-width: 600px) {
+  .centred {
+    font-size: 6vw;
+  }
+
+  h2 {
+    font-size: 5vw;
+  }
+
+  .icon {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .hamburger {
+    font-size: 5vw;
+  }
 }
 
 .centred {
@@ -29,123 +107,75 @@ a {
 }
 
 .centred::before {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    width: 150%;
-    height: 200%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index:-1;
-    /* border:1px solid green;  */
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 150%;
+  height: 200%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  /* border:1px solid green;  */
 }
 
 .centred span {
-    visibility: hidden;
-    background-color:rgb(21, 114, 161, 0.65);
-    padding: 10px;
-    border-radius: 20%;
+  visibility: hidden;
+  background-color: rgb(21, 114, 161, 0.65);
+  padding: 10px;
+  border-radius: 20%;
 }
 
 .centred:hover span {
-    visibility: visible;
-}   
-
-/* 
-.icon:hover {
-    opacity: 0.4;
-} */
-
-nav {
-    background-color: #1572A1;
-    display: grid;
-    grid-template-columns: 1fr 2fr 0.75fr;
-    align-items: center;
-    text-align: center;
-    padding: 10px 20px;
-    color: white;    
-
-}
-
-.logo {
-    height: 80px;
-}
-
-nav h1 {
-    text-align: left
-}
-nav > section {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.85em;
-    padding: 5px;
-}
-
-main > section {
-    background-color:#E3BEC6;
-    padding: 20px;
-}
-
-.presentations > a {
-    color:#435e6b;
-}
-
-.icon-menu {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 20px;
-    row-gap: 20px;
-}
-
-.inset {
-    background-color:rgb(213, 167, 178);
-    padding: 30px;
-    margin: 50px;
-    font-size: 0.8em;
+  visibility: visible;
 }
 
 .specialty-icon {
-    height: 80px;  
+  height: 80px;
 }
 
 .pair {
-    text-align: left;
+  text-align: left;
+}
+
+.inset {
+  background-color: rgb(213, 167, 178);
+  padding: 30px;
+  margin: 50px;
+  font-size: 0.8em;
 }
 
 .presentations {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    justify-content: space-evenly
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
 }
 
 footer {
-    background-color: blanchedalmond;
-    text-align: center;
+  background-color: blanchedalmond;
+  text-align: center;
 }
 
 #contact {
-    display: grid;
-    justify-content: center;
+  display: grid;
+  justify-content: center;
 }
 .form {
-    background-color:#4d85553a;
-    margin: 20px;
-    padding: 30px;
-    border-radius: 10%;
-    /* display: grid; */
+  background-color: #4d85553a;
+  margin: 20px;
+  padding: 30px;
+  border-radius: 10%;
+  /* display: grid; */
 }
 .form-fields {
-    padding: 10px 70px;
-    display: grid;
+  padding: 10px 70px;
+  display: grid;
 }
 
 #button {
-    background-color:#1572A1;
-    font-family: "Amatic SC", cursive;
-    font-size: 0.8em;
-    color: white;
-    margin: 10px 0px 10px 300px;
+  background-color: #1572a1;
+  font-family: "Amatic SC", cursive;
+  font-size: 0.8em;
+  color: white;
+  margin: 10px 0px 10px 300px;
 }
