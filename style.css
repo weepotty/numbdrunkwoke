@@ -211,7 +211,7 @@ footer {
     position: fixed;
     left: 100%;
     top: 0;
-    padding: 20px;
+    padding: 40px;
     flex-direction: column;
     background-color: black;
     width: 100%;
@@ -219,7 +219,7 @@ footer {
     text-align: center;
     transition: 0.5s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-    z-index: 100;
+    z-index: 1;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -255,6 +255,7 @@ footer {
   .hamburger {
     display: block;
     cursor: pointer;
+    z-index: 50;
   }
 
   span.bar {
