@@ -1,69 +1,10 @@
 * {
   box-sizing: border-box;
 }
-@media only screen and (max-width: 450px) {
-  .centred {
-    font-size: 6vw;
-  }
 
-  h2 {
-    display: none;
-  }
-
-  .icon {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .hamburger {
-    font-size: 4vw;
-  }
-
-  nav h1 {
-    text-align: left;
-    font-size: 7vw;
-  }
-
-  nav {
-    background-color: #1572a1;
-    display: grid;
-    align-items: center;
-    text-align: center;
-    padding: 10px 20px;
-    color: white;
-  }
-
-  img {
-    height: 8vh;
-  }
-
-  .instruction {
-    font-size: 6vw;
-  }
-
-  footer {
-    font-size: 5vw;
-  }
-
-  .form {
-    width: 90vw;
-    border-radius: 10%;
-    /* display: grid; */
-  }
-
-  textarea {
-    width: 80vw;
-  }
-
-  .form-fields {
-    width: 100%;
-  }
-
-  #button {
-    width: 15vw;
-  }
+nav a.icon {
+  display: none;
 }
-
 body {
   background-color: #9ad0ec;
   font-size: 30px;
@@ -73,6 +14,21 @@ body {
 a {
   color: white;
   text-decoration: none;
+}
+
+nav a:hover {
+  color: #e3bec6;
+}
+
+.presentations a:link {
+  color: black;
+}
+.presentations a:visited {
+  color: grey;
+}
+
+.presentations a:hover {
+  color: white;
 }
 
 /* 
@@ -89,12 +45,13 @@ nav {
   padding: 10px 20px;
   color: white;
 }
-.topleftbar {
+
+nav .topleftbar {
   display: grid;
   grid-template-rows: auto auto;
 }
 .logo {
-  height: 6vh;
+  height: 80px;
 }
 h2 {
   text-align: left;
@@ -125,6 +82,7 @@ main > section {
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row: 1;
+  text-align: center;
 }
 
 .icon-menu {
@@ -133,6 +91,7 @@ main > section {
   justify-content: space-evenly;
   padding: 20px;
   row-gap: 20px;
+  /* height: 80vh; */
 }
 
 .icon {
@@ -220,3 +179,85 @@ footer {
   margin-left: auto;
   margin-top: 10px;
 }
+
+/* start of media query */
+
+@media only screen and (max-width: 450px) {
+  .centred {
+    font-size: 6vw;
+  }
+
+  h2 {
+    display: none;
+  }
+
+  .icon {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .hamburger {
+    font-size: 4vw;
+  }
+
+  nav h1 {
+    text-align: left;
+    font-size: 7vw;
+  }
+
+  nav {
+    background-color: #1572a1;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    padding: 10px 20px;
+    color: white;
+    overflow: hidden;
+    position: relative;
+  }
+
+  nav a.icon {
+    background: #1572a1;
+    display: block;
+    position: relative;
+    right: 0px;
+    top: 0px;
+    font-size: 1em;
+  }
+
+  nav .hamburger {
+    display: none;
+  }
+
+  img {
+    height: 8vh;
+  }
+
+  .instruction {
+    font-size: 6vw;
+  }
+
+  footer {
+    font-size: 5vw;
+  }
+
+  .form {
+    width: 90vw;
+    border-radius: 10%;
+    /* display: grid; */
+  }
+
+  textarea {
+    width: 80vw;
+  }
+
+  .form-fields {
+    width: 100%;
+  }
+
+  #button {
+    width: 15vw;
+  }
+}
+
+/* end of media query */
