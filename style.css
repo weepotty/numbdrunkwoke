@@ -2,9 +2,6 @@
   box-sizing: border-box;
 }
 
-nav a.poo {
-  display: none;
-}
 body {
   background-color: #9ad0ec;
   font-size: 30px;
@@ -67,6 +64,20 @@ nav > section {
   /* justify-content: space-between; */
   font-size: 0.9em;
   padding: 5px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
 }
 
 main > section {
@@ -182,7 +193,7 @@ footer {
 
 /* start of media query */
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 1900px) {
   .centred {
     font-size: 6vw;
   }
@@ -196,8 +207,33 @@ footer {
     height: auto;
   }
 
-  .hamburger {
-    font-size: 4vw;
+  .nav-item {
+    position: fixed;
+    left: 100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.5s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-item.active {
+    left: 0;
   }
 
   nav h1 {
@@ -212,21 +248,15 @@ footer {
     text-align: center;
     padding: 10px 20px;
     color: white;
-    overflow: hidden;
-    position: relative;
   }
 
-  nav a.poo {
-    background: #1572a1;
+  .hamburger {
     display: block;
-    position: relative;
-    right: 0px;
-    top: 0px;
-    font-size: 1em;
+    cursor: pointer;
   }
 
-  nav .hamburger {
-    display: none;
+  span.bar {
+    background: white;
   }
 
   img {

@@ -9,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="this website a virtual library of teaching presentations of topics in anaesthesia.">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="redketchup/apple-touch-icon.png?">
     <link rel="icon" type="image/png" sizes="32x32" href="redketchup/favicon-32x32.png?">
     <link rel="icon" type="image/png" sizes="16x16" href="redketchup/favicon-16x16.png?">
@@ -24,28 +23,38 @@
         </div>
         <h1>numb drunk & woke</h1>    
         
-        <section class="hamburger">
-            <a href="about.html">about</a>
-            <a href="contribute.html">upload</a>
-            <a href="contact.html">contact</a>
+        <section class="nav-item">
+            <a href="about.html" class="nav-link">about</a>
+            <a href="contribute.html" class="nav-link">upload</a>
+            <a href="contact.html" class="nav-link">contact</a>
         </section>
         
-        <a href="javascript:void(0);" class="poo" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
           
         </nav>
+<script>
+    const hamburger = document.querySelector(".hamburger");
+const navItem = document.querySelector(".nav-item");
 
-    <script>
-            function myFunction() {
-              var x = document.getElementByClass("hamburger");
-              if (x.style.display === "block") {
-                x.style.display = "none";
-              } else {
-                x.style.display = "block";
-              }
-            }
-    </script>
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navItem.classList.toggle("active");
+}
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navItem.classList.remove("active");
+}
+</script>
     
     <main>
         <section class="icon-menu">
