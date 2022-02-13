@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-nav a.icon {
+nav a.poo {
   display: none;
 }
 body {
@@ -216,7 +216,7 @@ footer {
     position: relative;
   }
 
-  nav a.icon {
+  nav a.poo {
     background: #1572a1;
     display: block;
     position: relative;
